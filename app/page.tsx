@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    // <div className="relative min-h-screen bg-black selection:bg-sky-500/20 overflow-hidden">
+    // < className="relative min-h-screen bg-black selection:bg-sky-500/20 overflow-hidden">
     <main className="relative px-6 pt-32">
       <div className="mx-auto max-w-5xl">
         {/* Hero Section */}
@@ -174,6 +174,5 @@ export default function Home() {
         </div>
       </div>
     </main>
-    // </div>
   );
 }
