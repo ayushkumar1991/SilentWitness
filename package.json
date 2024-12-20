@@ -9,20 +9,36 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.7.4",
+    "@google/generative-ai": "^0.21.0",
+    "@neondatabase/serverless": "^0.10.4",
+    "@prisma/adapter-neon": "^6.1.0",
+    "@prisma/adapter-pg": "^6.1.0",
+    "@prisma/client": "^6.1.0",
+    "appwrite": "^16.1.0",
     "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "lucide-react": "^0.469.0",
     "next": "14.2.16",
     "next-auth": "^4.24.11",
+    "pg": "^8.13.1",
+    "prisma": "^6.1.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "ws": "^8.18.0"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/ws": "^8.5.13",
     "eslint": "^8",
     "eslint-config-next": "14.2.16",
     "postcss": "^8",
+    "supabase": "^2.1.1",
     "tailwindcss": "^3.4.1",
+    "ts-node": "^10.9.2",
     "typescript": "^5"
   }
 }
