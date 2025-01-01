@@ -4,6 +4,7 @@ import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { Report, ReportStatus, ReportType } from "@prisma/client";
 import { signOut } from "next-auth/react";
+import Image from "next/image"; 
 
 export default function Dashboard() {
   const { data: session } = useSession();
@@ -181,12 +182,14 @@ export default function Dashboard() {
                     </span>
                   </div>
                   {report.image && (
-                    <img
-                      src={report.image}
-                      alt="Report"
-                      className="mt-4 rounded-lg border border-neutral-800"
+                    <Image
+                    src={report.image}
+                    alt="Report"
+                    width={600}  // You can specify the width of the image
+                    height={400} // You can specify the height of the imag
+                    className="mt-4 rounded-lg border border-neutral-800"
                     />
-                  )}
+                    )}
                 </div>
                 <select
                   value={report.status}
