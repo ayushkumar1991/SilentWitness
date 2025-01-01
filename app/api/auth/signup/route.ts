@@ -1,4 +1,5 @@
-import prisma from "@/lib/prisma";
+import { PrismaClient } from "@prisma/client";
+const prisma = new PrismaClient();
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
@@ -40,10 +41,12 @@ export async function POST(request: Request) {
     });
 
     // Remove password from response
-    const { password: _, ...userWithoutPassword } = user;
+    
+    
+    const { password: _password, ...userWithoutPassword } = user;
 
     return NextResponse.json(userWithoutPassword, { status: 201 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Signup error:", error);
     return NextResponse.json({ error: "Error creating user" }, { status: 500 });
   }

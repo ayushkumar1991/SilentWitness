@@ -38,6 +38,7 @@ export function LocationInput({
         // Reverse geocode asynchronously without blocking the main UI
         fetchAddressAsync(latitude, longitude);
       },
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       (error) => {
         setLocationError(
           "Unable to get location. Please allow location access or try again."
@@ -69,6 +70,7 @@ export function LocationInput({
         // In case address is not available, still update with the coordinates
         onChange(`${latitude.toFixed(6)}, ${longitude.toFixed(6)}`);
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
       console.warn("Reverse geocoding failed, showing raw coordinates instead.");
       // Update with raw coordinates in case of an error
@@ -93,7 +95,7 @@ export function LocationInput({
         });
 
         if (response.data && response.data.length > 0) {
-          const suggestionsList = response.data.map((item: any) => item.display_name);
+          const suggestionsList = response.data.map((item: { display_name: string }) => item.display_name);
           setSuggestions(suggestionsList); // Update suggestions
         } else {
           setSuggestions([]); // No suggestions found

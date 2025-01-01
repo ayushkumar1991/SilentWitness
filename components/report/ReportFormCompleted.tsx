@@ -1,12 +1,12 @@
 "use client";
 
 interface ReportSubmittedProps {
-  data: any;
-  onComplete: (data: any) => void;
+  data: unknown;
+  onComplete: (data: unknown) => void;
 }
 
 export function ReportSubmitted({ data }: ReportSubmittedProps) {
-  const reportId = data.reportId || "ERROR-ID-NOT-FOUND";
+  const reportId = (data as { reportId?: string }).reportId || "ERROR-ID-NOT-FOUND";
 
   return (
     <div className="text-center space-y-6">

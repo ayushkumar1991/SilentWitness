@@ -6,10 +6,17 @@ import { ReportSubmitted } from "./ReportFormCompleted";
 
 export function ReportWizard() {
   const [currentStep, setCurrentStep] = useState(1);
-  const [reportData, setReportData] = useState<any>(null);
+  interface ReportData {
+    // define the structure of your report data here
+    [key: string]: unknown;
+  }
 
-  const handleStepComplete = async (data: any) => {
-    setReportData({ ...reportData, ...data });
+  const [reportData, setReportData] = useState<ReportData>({});
+
+  const handleStepComplete = async (data: unknown) => {
+    if (typeof data === 'object' && data !== null) {
+      setReportData({ ...reportData, ...data });
+    }
 
     if (currentStep === 4) {
       return;

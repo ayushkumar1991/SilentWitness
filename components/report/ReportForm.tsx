@@ -16,7 +16,7 @@ const REPORT_TYPES = [
 type ReportType = "EMERGENCY" | "NON_EMERGENCY";
 
 interface ReportFormProps {
-  onComplete: (data: any) => void;
+  onComplete: (data: unknown) => void;
 }
 
 export function ReportForm({ onComplete }: ReportFormProps) {

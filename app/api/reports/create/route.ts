@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
-import prisma from "@/lib/prisma";
+import { PrismaClient } from "@prisma/client";
+
+const prisma = new PrismaClient();
 import { ReportType } from "@prisma/client";
 
 export async function POST(request: Request) {
@@ -7,7 +9,6 @@ export async function POST(request: Request) {
     const {
       reportId,
       type,
-      specificType,
       title,
       description,
       location,
@@ -23,7 +24,7 @@ export async function POST(request: Request) {
         type: type as ReportType,
         title,
         description,
-        reportType: specificType,
+        // specificType,
         location,
         latitude: latitude || null,
         longitude: longitude || null,

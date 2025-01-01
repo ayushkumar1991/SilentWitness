@@ -21,6 +21,7 @@ export function ReportTracker() {
   const [reportDetails, setReportDetails] = useState<ReportDetails | null>(
     null
   );
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -42,6 +43,7 @@ export function ReportTracker() {
       }
       const data = await response.json();
       setReportDetails(data);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       setError("Unable to find report. Please check the ID and try again.");
     } finally {
