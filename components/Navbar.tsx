@@ -49,18 +49,18 @@ export default function Navbar() {
               >
                 Track Report
               </Link>
+              <Link 
+              href="/how-it-works" 
+              className="text-zinc-400 hover:text-white">
+               How It Works
+               </Link>
               <Link
-                href="/how-it-works"
-                className="text-sm text-zinc-400 hover:text-white transition-colors"
-              >
-                How It Works
-              </Link>
-              <Link
-                href="/resources"
+                href="/Resources"
                 className="text-sm text-zinc-400 hover:text-white transition-colors"
               >
                 Resources
               </Link>
+              
             </div>
 
             {/* Emergency Button */}
@@ -73,7 +73,16 @@ export default function Navbar() {
               </Link>
               <button className="group flex h-9 items-center gap-2 rounded-full bg-red-500/10 pl-4 pr-5 text-sm font-medium text-red-500 ring-1 ring-inset ring-red-500/20 transition-all hover:bg-red-500/20">
                 <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-pulse" />
-                Emergency: 911
+                Emergency: 112
+              </button>
+              <button className="group flex h-9 items-center gap-2 rounded-full bg-red-500/10 pl-4 pr-5 text-sm font-medium text-red-500 ring-1 ring-inset ring-red-500/20 transition-all hover:bg-red-500/20">
+                <span className="h-1.5 w-1.5 rounded-full bg-yellow-500 animate-pulse" />
+                <Link
+                  href="/auth/signup"
+                  className="text-sm text-zinc-400 hover:text-white transition-colors"
+                >
+                  ADMIN Login Here!!
+                </Link>
               </button>
 
               {/* Mobile Menu Button */}

@@ -151,7 +151,7 @@ export default function Home() {
         <div className="mt-40 rounded-2xl bg-zinc-900 p-8">
           <div className="grid gap-y-8 sm:grid-cols-3">
             {[
-              { value: "100K+", label: "Reports Filed" },
+              { value: "10K+", label: "Reports Filed" },
               { value: "100%", label: "Anonymity Rate" },
               { value: "24/7", label: "Support Available" },
             ].map((stat, i) => (
@@ -169,7 +169,7 @@ export default function Home() {
         <div className="mt-40 mb-20 flex justify-center">
           <div className="inline-flex items-center gap-3 rounded-full bg-zinc-900 px-5 py-2 text-sm text-zinc-400">
             <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-            Trusted by Law Enforcement Nationwide
+            Trusted by Law Enforcement Nationwide in INDIA
           </div>
         </div>
       </div>
